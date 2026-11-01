@@ -7,6 +7,8 @@ state, of size **37**, which the model leaves as an unresolved BIG region.
 That partial solution is good enough to be completed and corrected by human
 eye.  The same encoding at K = 15 is infeasible.
 
+![K-sweep animation](k_sweep.gif)
+
 ## The puzzle
 
 Partition the 11×11 board into orthogonally connected polyomino **states**.
@@ -202,8 +204,6 @@ BIG cells, clue values) and assembles the frames into `k_sweep.gif`
 `ortools==9.15.6755`.
 
 ## Animation
-
-![K-sweep animation](k_sweep.gif)
 
 `k_sweep.gif` shows the stage-1 model at K = 7, 8, 9, 10, 11, 12, 13, 14
 (K = 4, 5, 6 are infeasible).  Each frame is a real solver solution; the board
