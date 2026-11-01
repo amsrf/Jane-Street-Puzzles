@@ -7,6 +7,11 @@ https://drive.google.com/drive/folders/1eS_19jZLyKXJExIX_RxgBQwePUq5wHhF?usp=dri
 
 ## October 2026 — 11×11 States & Capitols (CP-SAT, K = 14)
 
+> **This code does not solve the puzzle.** It is an **assistance tool**: the
+> K = 14 model returns a partial solution (all clues essentially solved
+> except for the biggest state of size 37) that a human must complete and
+> correct by eye.  It is not a full solver.
+
 The `October_2026/` folder contains the CP-SAT model used to tackle the 11×11
 puzzle.  It solves the small-clue part exactly for every clue `T ≤ 14` and
 returns a **partial solution**: all clues are essentially solved except for

@@ -1,5 +1,10 @@
 # Jane Street October 2026 — 11×11 States & Capitols (CP-SAT, K = 14)
 
+> **This code does not solve the puzzle.** It is an **assistance tool**: the
+> K = 14 model produces a partial solution (all clues essentially solved
+> except for the biggest state, of size 37) that a human must complete and
+> correct by eye.  It is not a full solver.
+
 A CP-SAT (OR-Tools) model for the 11×11 *states and capitols* puzzle.  The
 K = 14 run does **not** solve the whole puzzle: it returns a **partial
 solution** in which all clues are essentially solved except for the biggest
