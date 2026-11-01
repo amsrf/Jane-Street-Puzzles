@@ -1,8 +1,11 @@
 # Jane Street October 2026 — 11×11 States & Capitols (CP-SAT, K = 14)
 
 A CP-SAT (OR-Tools) model for the 11×11 *states and capitols* puzzle.  The
-K = 14 run finds a valid, fully checked solution of the small-clue model; the
-same encoding at K = 15 is infeasible.
+K = 14 run does **not** solve the whole puzzle: it returns a **partial
+solution** in which all clues are essentially solved except for the biggest
+state, of size **37**, which the model leaves as an unresolved BIG region.
+That partial solution is good enough to be completed and corrected by human
+eye.  The same encoding at K = 15 is infeasible.
 
 ## The puzzle
 
@@ -75,6 +78,12 @@ VALID: 16 small states, 34 BIG cells, 1 BIG capitol
 enforced failures: 0
 ```
 
+This is a **partial** solution.  The 16 small states and the single BIG
+capitol are determined and all clues `T ≤ 14` are satisfied, but the 37-cell
+state itself sits inside the unresolved BIG region, so the model does not fix
+it.  The large clues are only bounded.  The remaining 37-cell shape is the
+part that was completed by human eye.
+
 The same configuration at K = 15 returns `INFEASIBLE` after 930.7 s, so K = 14
 is the largest K solved by this decomposition.
 
@@ -97,13 +106,3 @@ is the largest K solved by this decomposition.
 pip install -r requirements.txt
 python try_k14.py
 ```
-
-## Final answer
-
-Labelling every cell with its state's size gives row sums
-
-```
-[58, 86, 202, 215, 211, 221, 180, 234, 212, 208, 206]
-```
-
-and the sum of their squares is **408951**.
