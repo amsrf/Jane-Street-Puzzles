@@ -7,12 +7,12 @@ https://drive.google.com/drive/folders/1eS_19jZLyKXJExIX_RxgBQwePUq5wHhF?usp=dri
 
 ## October 2026 — 11×11 States & Capitols (CP-SAT, K = 14)
 
-The `k14_sat/` folder contains the CP-SAT model used to tackle the 11×11
+The `October_2026/` folder contains the CP-SAT model used to tackle the 11×11
 puzzle.  It solves the small-clue part exactly for every clue `T ≤ 14` and
 returns a **partial solution**: all clues are essentially solved except for
 the biggest state, of size **37**, which the model leaves as an unresolved
 BIG region.  That partial solution is good enough to be completed and
-corrected by human eye.  See `k14_sat/README.md` for the full write-up.
+corrected by human eye.  See `October_2026/README.md` for the full write-up.
 
 **Technique in short.**  Enumerate every placement of every symmetric
 polyomino of size ≤ 14 (together with its real capitol, derived from the
