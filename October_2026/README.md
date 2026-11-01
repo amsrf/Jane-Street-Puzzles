@@ -98,6 +98,8 @@ is the largest K solved by this decomposition.
 | `main.py` | CLI/helper routines, including `offending_big_components` used by the growth cuts. |
 | `try_k14.py` | The K = 14 run: builds the config, solves, validates and prints the partial solution. |
 | `render_solution.py` | Pretty-printer for a solution plus an independent Dijkstra clue check. |
+| `make_k_sweep_gif.py` | Builds the K-sweep animation (`k_sweep.gif`). |
+| `k_sweep.gif` | 8-frame animation of the solver at K = 7…14. |
 | `requirements.txt` | `ortools==9.15.6755`. |
 
 ### `stage1.py`
@@ -187,9 +189,24 @@ small capitol, `@` for a BIG capitol, `#` for a BIG cell), the state legend
 (size, capitol, cells), and an independent Dijkstra clue check with the
 per-clue status and the number of enforced failures.
 
+### `make_k_sweep_gif.py`
+
+Runs the stage-1 solver for a list of `K` values (`KS` environment variable,
+default `4,5,…,14`), keeps every feasible solution, renders each as a PNG
+frame (small states coloured, `*` small capitol, gold `@` BIG capitol, gray
+BIG cells, clue values) and assembles the frames into `k_sweep.gif`
+(900 ms per frame, looping).  The default run took about 25 min on 16 cores.
+
 ### `requirements.txt`
 
 `ortools==9.15.6755`.
+
+## Animation
+
+`k_sweep.gif` shows the stage-1 model at K = 7, 8, 9, 10, 11, 12, 13, 14
+(K = 4, 5, 6 are infeasible).  Each frame is a real solver solution; the board
+resolves as K grows and the final frame is the K = 14 partial solution
+(16 small states, 34 BIG cells).
 
 ## Run
 
