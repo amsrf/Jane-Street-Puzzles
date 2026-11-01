@@ -203,6 +203,8 @@ BIG cells, clue values) and assembles the frames into `k_sweep.gif`
 
 ## Animation
 
+![K-sweep animation](k_sweep.gif)
+
 `k_sweep.gif` shows the stage-1 model at K = 7, 8, 9, 10, 11, 12, 13, 14
 (K = 4, 5, 6 are infeasible).  Each frame is a real solver solution; the board
 resolves as K grows and the final frame is the K = 14 partial solution

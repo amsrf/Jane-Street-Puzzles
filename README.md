@@ -14,6 +14,8 @@ the biggest state, of size **37**, which the model leaves as an unresolved
 BIG region.  That partial solution is good enough to be completed and
 corrected by human eye.  See `October_2026/README.md` for the full write-up.
 
+![K-sweep animation](October_2026/k_sweep.gif)
+
 **Technique in short.**  Enumerate every placement of every symmetric
 polyomino of size ≤ 14 (together with its real capitol, derived from the
 capitol rule).  Every cell is either covered by one such placement or marked
